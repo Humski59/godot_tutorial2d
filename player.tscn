@@ -32,8 +32,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_px3l8"]
-radius = 27.0
-height = 68.0
+radius = 22.0
+height = 54.0
 
 [node name="Player" type="Area2D"]
 position = Vector2(232, 332)
@@ -41,9 +41,11 @@ script = ExtResource("1_ub18r")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_tl27i")
 animation = &"up"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_px3l8")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
