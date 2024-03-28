@@ -4,6 +4,7 @@ signal hit
 
 @export var speed = 400
 var screen_size
+var velocity = Vector2.ZERO
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -12,15 +13,16 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	var velocity = Vector2.ZERO
-	if Input.is_action_pressed("move_right"):
-		velocity.x += 1
-	if Input.is_action_pressed("move_left"):
-		velocity.x -= 1
-	if Input.is_action_pressed("move_up"):
-		velocity.y -= 1
-	if Input.is_action_pressed("move_down"):
-		velocity.y += 1
+	#var velocity = Vector2.ZERO
+	#if Input.is_action_pressed("move_right"):
+		#velocity.x += 1
+	#if Input.is_action_pressed("move_left"):
+		#velocity.x -= 1
+	#if Input.is_action_pressed("move_up"):
+		#velocity.y -= 1
+	#if Input.is_action_pressed("move_down"):
+		#velocity.y += 1
+	pass
 
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
@@ -51,3 +53,9 @@ func _on_body_entered(body):
 	hide()
 	hit.emit()
 	$CollisionShape2D.set_deferred("disabled", true)
+
+
+func _on_mobile_control_use_move_vector(move_vector):
+	velocity = move_vector
+	#$AnimatedSprite2D.flip_h = move_vector.x < 0
+	

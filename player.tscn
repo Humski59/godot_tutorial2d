@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://c2uia4h83386h"]
+[gd_scene load_steps=9 format=3 uid="uid://c2uia4h83386h"]
 
 [ext_resource type="Texture2D" uid="uid://5clthdkcdpoe" path="res://art/playerGrey_up1.png" id="1_jxloo"]
 [ext_resource type="Script" path="res://player.gd" id="1_ub18r"]
 [ext_resource type="Texture2D" uid="uid://dcrcwy3vn8ifu" path="res://art/playerGrey_up2.png" id="2_vsg65"]
 [ext_resource type="Texture2D" uid="uid://cc8rfaghm11na" path="res://art/playerGrey_walk1.png" id="3_0bi27"]
 [ext_resource type="Texture2D" uid="uid://dw56fvao4xpuk" path="res://art/playerGrey_walk2.png" id="4_gant1"]
+[ext_resource type="PackedScene" uid="uid://bsnm7y7g8cxoc" path="res://mobile_control.tscn" id="6_jhas1"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tl27i"]
 animations = [{
@@ -47,4 +48,7 @@ animation = &"up"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_px3l8")
 
+[node name="MobileControl" parent="." instance=ExtResource("6_jhas1")]
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="use_move_vector" from="MobileControl" to="." method="_on_mobile_control_use_move_vector"]
