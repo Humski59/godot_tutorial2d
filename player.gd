@@ -30,6 +30,7 @@ func _process(delta):
 		$AnimatedSprite2D.stop()
 	position += velocity_t * delta
 	position = position.clamp(Vector2.ZERO, screen_size)
+	
 
 	if velocity.x != 0:
 		$AnimatedSprite2D.animation = "walk"
