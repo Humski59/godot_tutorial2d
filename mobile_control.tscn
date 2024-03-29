@@ -10,7 +10,7 @@ radius = 250.0
 script = ExtResource("1_qx8pp")
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="."]
-position = Vector2(310, 540)
+position = Vector2(288, 544)
 scale = Vector2(0.25, 0.25)
 texture_normal = ExtResource("1_ule74")
 shape = SubResource("CircleShape2D_r86hw")
