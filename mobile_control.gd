@@ -3,6 +3,9 @@ extends CanvasLayer
 signal use_move_vector
 
 var move_vector = Vector2.ZERO
+var texture_center
+var object_scale
+var button_radius
 var joystick_active = false
 
 func _input(event):
@@ -24,29 +27,18 @@ func _input(event):
 			$Inner_circle.visible = false
 			
 func calculate_move_vector(event_position):
-	var texture_center = $TouchScreenButton.position + Vector2(62.5, 62.5)
-	#print($TouchScreenButton.position)
-	#print(event_position)
 	var normalized_event_position = (event_position - texture_center) / 62.5
 	
-	if normalized_event_position.x > 1:
-		normalized_event_position.x = 1
-	elif normalized_event_position.x < -1:
-		normalized_event_position.x = -1
-	
-	if normalized_event_position.y > 1:
-		normalized_event_position.y = 1
-	elif normalized_event_position.y < -1:
-		normalized_event_position.y = -1
-	#print(normalized_event_position)
+	if normalized_event_position.length() > 1:
+		normalized_event_position = normalized_event_position.normalized() 
 	
 	return normalized_event_position
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	#pass # Replace with function body.
+	button_radius = $TouchScreenButton.shape.radius
+	object_scale = $TouchScreenButton.scale
+	texture_center = $TouchScreenButton.position + object_scale * button_radius
 	$Inner_circle.visible = false
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
