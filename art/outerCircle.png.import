@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bpml4gona22ob"
-path="res://.godot/imported/tile_0034.png-96d316db396a04d5917a65de4e2ac6e7.ctex"
+uid="uid://bhnny05ppcbq1"
+path="res://.godot/imported/outerCircle.png-ae8c56d98a5af77731daf72e2cabd9f4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/tile_0034.png"
-dest_files=["res://.godot/imported/tile_0034.png-96d316db396a04d5917a65de4e2ac6e7.ctex"]
+source_file="res://art/outerCircle.png"
+dest_files=["res://.godot/imported/outerCircle.png-ae8c56d98a5af77731daf72e2cabd9f4.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://di603fcc0181y"
-path="res://.godot/imported/buttonKrug.png-3b00e47ce54de177e6ddf29803f8c790.ctex"
+uid="uid://c60ria0ipjsdv"
+path="res://.godot/imported/innerCircle.png-dab401add5062279f160bb35bd3c07b0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/buttonKrug.png"
-dest_files=["res://.godot/imported/buttonKrug.png-3b00e47ce54de177e6ddf29803f8c790.ctex"]
+source_file="res://art/innerCircle.png"
+dest_files=["res://.godot/imported/innerCircle.png-dab401add5062279f160bb35bd3c07b0.ctex"]
 
 [params]
 
