@@ -1,15 +1,16 @@
 [gd_scene load_steps=4 format=3 uid="uid://bsnm7y7g8cxoc"]
 
 [ext_resource type="Script" path="res://mobile_control.gd" id="1_qx8pp"]
-[ext_resource type="Texture2D" uid="uid://di603fcc0181y" path="res://art/buttonKrug.png" id="1_ule74"]
-[ext_resource type="Texture2D" uid="uid://bpml4gona22ob" path="res://art/tile_0034.png" id="3_d3k0t"]
+[ext_resource type="Texture2D" uid="uid://c60ria0ipjsdv" path="res://art/innerCircle.png" id="2_t3kin"]
+[ext_resource type="Texture2D" uid="uid://bhnny05ppcbq1" path="res://art/outerCircle.png" id="3_ue6b1"]
 
 [node name="MobileControl" type="CanvasLayer"]
 script = ExtResource("1_qx8pp")
 
 [node name="InnerCircle" type="Sprite2D" parent="."]
-texture = ExtResource("3_d3k0t")
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_t3kin")
 
 [node name="OuterCircle" type="Sprite2D" parent="."]
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("1_ule74")
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("3_ue6b1")
